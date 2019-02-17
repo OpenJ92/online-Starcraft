@@ -53,7 +53,7 @@ class Participant(db.Model):
     events_UIE = db.relationship('UnitInitEvent', back_populates = 'participant')
     events_UDE = db.relationship('UnitDoneEvent', back_populates = 'participant')
     events_BCE = db.relationship('BasicCommandEvent', back_populates = 'participant')
-    events_TPE = db.relationship('TargetPointEvent', back_populates = 'participant')
+    events_TPE = db.relationship('TargetPointCommandEvent', back_populates = 'participant')
     events_UDiE = db.relationship('UnitDiedEvent', back_populates = 'participant')
 
     def __repr__(self):
@@ -110,7 +110,7 @@ class Game(db.Model):
     time_zone = db.Column(db.Float)
 
     def __repr__(self):
-        return '<Game (map = ' + self.map + ', name = '+ self.name +') >'
+        return '<Game (map = ' + str(self.map) + ', ' + str(self.start_time) + ') >'
 
     def __str__(self):
         return 'game'
@@ -332,7 +332,7 @@ class BasicCommandEvent(db.Model):
     def all(cls):
         return db.session.query(cls).all()
 
-class TargetPointEvent(db.Model):
+class TargetPointCommandEvent(db.Model):
     __tablename__ = 'targetpointevent'
 
     id = db.Column(db.Integer, primary_key = True)

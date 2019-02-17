@@ -21,6 +21,8 @@ class Pull():
             try:
                 replay_list.append(sc2reader.load_replay('/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/temporaryReplayContainer/' + self.site_ + '/' + file))
             except Exception as e:
+                print('_______', e)
+                print('_______', '_______', file)
                 pass
         print(replay_list)
         return replay_list

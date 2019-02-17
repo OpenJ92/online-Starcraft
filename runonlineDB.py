@@ -4,7 +4,8 @@ from onlineInject import Inject
 from onlinePull import Pull
 from onlineTransfer import Transfer
 
-sites = ['sc2r', 'ggg', 'lotv']
+# 'sc2r',
+sites = ['ggg', 'lotv']
 
 for site in sites:
     print(site)

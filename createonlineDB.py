@@ -2,6 +2,11 @@ import dash
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
+# if __name__ == '__main__':
+#                   The preceeding line of code checks to see if this function was called directly
+#                   this will be useful in this file particularly, so we don't continuously rebuild
+#                   our .db
+
 server = Flask(__name__)
 server.config['DEBUG'] = True
 server.config['SQLALCHEMY_ECHO'] = False
