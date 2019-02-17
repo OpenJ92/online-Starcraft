@@ -279,12 +279,13 @@ class Inject():
             # print('buildReplayMetaData - ', e)
             return [], [], []
     def injectIntoDataBase(self, game, users, participants, replayEvents):
-        print(game, users)
+        try:
+            print(game, users)
+        except:
+            pass
         #import pdb; pdb.set_trace()
         db.session.add_all(game + users + participants + replayEvents)
         db.session.commit()
 
 if __name__ == '__main__':
-    test = db.session.query(Game).all()
-    test_2 = db.session.query(User).all()
-    test_3 = db.session.query(Participant).all()
+    pass
