@@ -257,9 +257,6 @@ class Inject():
         # import pdb; pdb.set_trace()
         return db.session.query(Game.id).filter(Game.name == str(replay.date) + '_' + replay.players[0].play_race + ' v ' + replay.players[1].play_race + '_' + replay.players[0].name + ' v ' + replay.players[1].name).first()
 
-### Rethink how to carry out this function. We really need to reconsider how we're building this functionself.
-### Currently, I'm having a difficult time debugging currently.
-
     def buildReplayMetaData(self, replay):
         try:
             if not self.checkExistanceGame(replay):
