@@ -58,7 +58,6 @@ class Inject():
             constructed_event = self.eventHASH()[event.name](event, replayMetaData)
             return constructed_event
         except Exception as e:
-            # print('buildEvent -', e)
             pass
     def buildEvents(self, replay, replayMetaData):
         return [self.buildEvent(event, replayMetaData) for event in replay.events if event.name in self.eventHASH().keys()]
@@ -127,7 +126,7 @@ class Inject():
         # import pdb; pdb.set_trace()
         particiapnt_name = event.unit_controller.name
         return UnitBornEvent(
-              participant = replayMetaData['Participant'][participant_name],
+              participant = replayMetaData['Participant'][particiapnt_name],
               name = event.name,
               second = event.second,
               unit_type_name = event.unit_type_name,

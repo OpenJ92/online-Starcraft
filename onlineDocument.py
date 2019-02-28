@@ -1,14 +1,17 @@
 import re
 import nltk
-import gensim
+from createonlineDB import db
+from onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
+                         UnitTypeChangeEvent, UpgradeCompleteEvent, UnitDoneEvent, \
+                         BasicCommandEvent, TargetPointCommandEvent, UnitDiedEvent, UnitInitEvent
 
 class Document():
-    def __init__(self, replay_path):
-        self.replay_path = replay_path
-        self.document = self.construct_document()
+    def __init__(self):
+        pass
 
     def construct_document(self):
         self.load_replay()
+
     def load_replay(self):
         pass
 
@@ -16,5 +19,8 @@ class Document():
     # to perform ML NLP analysis. LSTM, clustering etc...
     # We're looking to apply Word to Vec and n-gram prediction to the replays
     # Think about how to consrtuct 'words' and a grammer for these documents
-    
+
     #https://en.wikipedia.org/wiki/Word2vec
+
+if __name__ == "__main__":
+    query = """SELECT * FROM users"""
