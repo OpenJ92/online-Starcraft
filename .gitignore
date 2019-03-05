@@ -1,2 +1,3 @@
 *.SC2Replay
 *.db
+_env/
