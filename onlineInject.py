@@ -226,6 +226,7 @@ class Inject():
            playrace = player.play_race,
            winner = user.name == game.game_winner
            )
+
     def buildUser(self, player):
         # import pdb; pdb.set_trace()
         return User(
@@ -233,9 +234,11 @@ class Inject():
             region = player.region,
             subregion = player.subregion
             )
+        
     def queryUser(self, id):
         # import pdb; pdb.set_trace()
         return db.session.query(User).filter_by(id = id).first()
+
     def buildGame(self, replay):
         # import pdb; pdb.set_trace()
         return Game(
@@ -252,6 +255,7 @@ class Inject():
     def checkExistanceUser(self, player):
         # import pdb; pdb.set_trace()
         return db.session.query(User.id).filter(User.name == player.name).first()
+
     def checkExistanceGame(self, replay):
         # import pdb; pdb.set_trace()
         return db.session.query(Game.id).filter(Game.name == str(replay.date) + '_' + replay.players[0].play_race + ' v ' + replay.players[1].play_race + '_' + replay.players[0].name + ' v ' + replay.players[1].name).first()
@@ -274,6 +278,7 @@ class Inject():
         except Exception as e:
             # print('buildReplayMetaData - ', e)
             return [], [], []
+
     def injectIntoDataBase(self, game, users, participants, replayEvents):
         try:
             print(game, users)

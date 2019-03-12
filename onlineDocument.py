@@ -18,3 +18,9 @@ class Document():
 
 if __name__ == "__main__":
     query = """SELECT * FROM users"""
+
+# There should be a higherarchy of classes here to capture different kinds of
+# queries. That is, if I query one replay I only need to construct a documentself.
+# If I query a collection of replays from a single where we keep one or two 'features' constant,
+# I should construct a 'book'. Those books should have ToC and indexes. A collection
+# of books should have a library class

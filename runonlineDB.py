@@ -7,11 +7,6 @@ from onlineTransfer import Transfer
 sites = [ 'ggg', 'lotv']
 
 for site in sites:
-    print(site)
-    print('Scrape')
     Scrape(site).run() #Scrape content from website
-    print('Inject(Pull)')
     Inject(Pull(site).run()).run() #Inject replay data into postGres .db.
-    print('Transfer')
     Transfer(site).run() #Transfer replay files into legacy dir.
-    print('------------')
