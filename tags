@@ -1,0 +1,267 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BasicCommandEvent	onlineModels.py	/^class BasicCommandEvent(db.Model):$/;"	c
+Document	onlineDocument.py	/^class Document():$/;"	c
+Game	onlineModels.py	/^class Game(db.Model):$/;"	c
+Inject	onlineInject.py	/^class Inject():$/;"	c
+Participant	onlineModels.py	/^class Participant(db.Model):$/;"	c
+Participants_Games	onlineModels.py	/^class Participants_Games(db.Model):$/;"	c
+Participants_Users	onlineModels.py	/^class Participants_Users(db.Model):$/;"	c
+PlayerStatsEvent	onlineModels.py	/^class PlayerStatsEvent(db.Model):$/;"	c
+Pull	onlinePull.py	/^class Pull():$/;"	c
+Scrape	onlineScrape.py	/^class Scrape():$/;"	c
+Table	onlineTable.py	/^class Table():$/;"	c
+TargetPointCommandEvent	onlineModels.py	/^class TargetPointCommandEvent(db.Model):$/;"	c
+Transfer	onlineTransfer.py	/^class Transfer():$/;"	c
+UnitBornEvent	onlineModels.py	/^class UnitBornEvent(db.Model):$/;"	c
+UnitDiedEvent	onlineModels.py	/^class UnitDiedEvent(db.Model):$/;"	c
+UnitDoneEvent	onlineModels.py	/^class UnitDoneEvent(db.Model):$/;"	c
+UnitInitEvent	onlineModels.py	/^class UnitInitEvent(db.Model):$/;"	c
+UnitTypeChangeEvent	onlineModels.py	/^class UnitTypeChangeEvent(db.Model):$/;"	c
+UpgradeCompleteEvent	onlineModels.py	/^class UpgradeCompleteEvent(db.Model):$/;"	c
+User	onlineModels.py	/^class User(db.Model):$/;"	c
+__init__	onlineDocument.py	/^    def __init__(self):$/;"	m	class:Document
+__init__	onlineInject.py	/^    def __init__(self, replays):$/;"	m	class:Inject
+__init__	onlinePull.py	/^    def __init__(self, site):$/;"	m	class:Pull
+__init__	onlineScrape.py	/^    def __init__(self, website):$/;"	m	class:Scrape
+__init__	onlineTable.py	/^    def __init__(self):$/;"	m	class:Table
+__init__	onlineTransfer.py	/^    def __init__(self, site):$/;"	m	class:Transfer
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:BasicCommandEvent	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:Game	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:Participant	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:PlayerStatsEvent	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:TargetPointCommandEvent	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:UnitBornEvent	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:UnitDiedEvent	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:UnitDoneEvent	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:UnitInitEvent	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:UnitTypeChangeEvent	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:UpgradeCompleteEvent	file:
+__repr__	onlineModels.py	/^    def __repr__(self):$/;"	m	class:User	file:
+__str__	onlineModels.py	/^    def __str__(self):$/;"	m	class:Game	file:
+__str__	onlineModels.py	/^    def __str__(self):$/;"	m	class:Participant	file:
+__str__	onlineModels.py	/^    def __str__(self):$/;"	m	class:User	file:
+__tablename__	onlineModels.py	/^    __tablename__ = 'basiccommandevent'$/;"	v	class:BasicCommandEvent
+__tablename__	onlineModels.py	/^    __tablename__ = 'games'$/;"	v	class:Game
+__tablename__	onlineModels.py	/^    __tablename__ = 'participants'$/;"	v	class:Participant
+__tablename__	onlineModels.py	/^    __tablename__ = 'participants_games'$/;"	v	class:Participants_Games
+__tablename__	onlineModels.py	/^    __tablename__ = 'participants_users'$/;"	v	class:Participants_Users
+__tablename__	onlineModels.py	/^    __tablename__ = 'playerstatsevents'$/;"	v	class:PlayerStatsEvent
+__tablename__	onlineModels.py	/^    __tablename__ = 'targetpointevent'$/;"	v	class:TargetPointCommandEvent
+__tablename__	onlineModels.py	/^    __tablename__ = 'unitbornevents'$/;"	v	class:UnitBornEvent
+__tablename__	onlineModels.py	/^    __tablename__ = 'unitdiedevents'$/;"	v	class:UnitDiedEvent
+__tablename__	onlineModels.py	/^    __tablename__ = 'unitdoneevent'$/;"	v	class:UnitDoneEvent
+__tablename__	onlineModels.py	/^    __tablename__ = 'unitinitevent'$/;"	v	class:UnitInitEvent
+__tablename__	onlineModels.py	/^    __tablename__ = 'unittypechangeevents'$/;"	v	class:UnitTypeChangeEvent
+__tablename__	onlineModels.py	/^    __tablename__ = 'upgradecompleteevents'$/;"	v	class:UpgradeCompleteEvent
+__tablename__	onlineModels.py	/^    __tablename__ = 'users'$/;"	v	class:User
+ability_name	onlineModels.py	/^    ability_name = db.Column(db.Text)$/;"	v	class:BasicCommandEvent
+ability_name	onlineModels.py	/^    ability_name = db.Column(db.Text)$/;"	v	class:TargetPointCommandEvent
+accesslastKnownFileLocation	onlineScrape.py	/^    def accesslastKnownFileLocation(self):$/;"	m	class:Scrape
+all	onlineModels.py	/^    def all(cls):$/;"	m	class:BasicCommandEvent
+all	onlineModels.py	/^    def all(cls):$/;"	m	class:Game
+all	onlineModels.py	/^    def all(cls):$/;"	m	class:Participant
+all	onlineModels.py	/^    def all(cls):$/;"	m	class:TargetPointCommandEvent
+all	onlineModels.py	/^    def all(cls):$/;"	m	class:UnitDoneEvent
+all	onlineModels.py	/^    def all(cls):$/;"	m	class:UnitInitEvent
+all	onlineModels.py	/^    def all(cls):$/;"	m	class:UnitTypeChangeEvent
+all	onlineModels.py	/^    def all(cls):$/;"	m	class:UpgradeCompleteEvent
+all	onlineModels.py	/^    def all(cls):$/;"	m	class:User
+app	createonlineDB.py	/^app = dash.Dash(__name__, server = server, url_base_pathname = '\/dashboard\/')$/;"	v
+avg_apm	onlineModels.py	/^    avg_apm = db.Column(db.Float)$/;"	v	class:Participant
+buildBasicCommandEvent	onlineInject.py	/^    def buildBasicCommandEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildEvent	onlineInject.py	/^    def buildEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildEvents	onlineInject.py	/^    def buildEvents(self, replay, replayMetaData):$/;"	m	class:Inject
+buildGame	onlineInject.py	/^    def buildGame(self, replay):$/;"	m	class:Inject
+buildParticipant	onlineInject.py	/^    def buildParticipant(self, user, game, player):$/;"	m	class:Inject
+buildPlayerStatsEvent	onlineInject.py	/^    def buildPlayerStatsEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildReplayMetaData	onlineInject.py	/^    def buildReplayMetaData(self, replay):$/;"	m	class:Inject
+buildTargetPointCommandEvent	onlineInject.py	/^    def buildTargetPointCommandEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildUnitBornEvent	onlineInject.py	/^    def buildUnitBornEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildUnitDiedEvent	onlineInject.py	/^    def buildUnitDiedEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildUnitDoneEvent	onlineInject.py	/^    def buildUnitDoneEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildUnitInitEvent	onlineInject.py	/^    def buildUnitInitEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildUnitTypeChangeEvent	onlineInject.py	/^    def buildUnitTypeChangeEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildUpgradeCompleteEvent	onlineInject.py	/^    def buildUpgradeCompleteEvent(self, event, replayMetaData):$/;"	m	class:Inject
+buildUser	onlineInject.py	/^    def buildUser(self, player):$/;"	m	class:Inject
+category	onlineModels.py	/^    category = db.Column(db.Text)$/;"	v	class:Game
+checkExistanceGame	onlineInject.py	/^    def checkExistanceGame(self, replay):$/;"	m	class:Inject
+checkExistanceUser	onlineInject.py	/^    def checkExistanceUser(self, player):$/;"	m	class:Inject
+column_names	onlineModels.py	/^    def column_names():$/;"	m	class:PlayerStatsEvent
+create_table	onlineTable.py	/^    def create_table(self):$/;"	m	class:Table
+db	createonlineDB.py	/^db = SQLAlchemy(server)$/;"	v
+dictMeta	onlineScrape.py	/^    def dictMeta(self):$/;"	m	class:Scrape
+downloadLink	onlineScrape.py	/^    def downloadLink(self, currentLocation):$/;"	m	class:Scrape
+end_time	onlineModels.py	/^    end_time = db.Column(db.DateTime)$/;"	v	class:Game
+eventHASH	onlineInject.py	/^    def eventHASH(self):$/;"	m	class:Inject
+event_Dictionary	onlineTable.py	/^    def event_Dictionary(self):$/;"	m	class:Table
+events_	onlineModels.py	/^    def events_(self, event):$/;"	m	class:Participant
+events_BCE	onlineModels.py	/^    events_BCE = db.relationship('BasicCommandEvent', back_populates = 'participant')$/;"	v	class:Participant
+events_PSE	onlineModels.py	/^    events_PSE = db.relationship('PlayerStatsEvent', back_populates = 'participant')$/;"	v	class:Participant
+events_TPE	onlineModels.py	/^    events_TPE = db.relationship('TargetPointCommandEvent', back_populates = 'participant')$/;"	v	class:Participant
+events_UBE	onlineModels.py	/^    events_UBE = db.relationship('UnitBornEvent', back_populates = 'participant')$/;"	v	class:Participant
+events_UCE	onlineModels.py	/^    events_UCE = db.relationship('UpgradeCompleteEvent', back_populates = 'participant')$/;"	v	class:Participant
+events_UDE	onlineModels.py	/^    events_UDE = db.relationship('UnitDoneEvent', back_populates = 'participant')$/;"	v	class:Participant
+events_UDiE	onlineModels.py	/^    events_UDiE = db.relationship('UnitDiedEvent', back_populates = 'participant')$/;"	v	class:Participant
+events_UIE	onlineModels.py	/^    events_UIE = db.relationship('UnitInitEvent', back_populates = 'participant')$/;"	v	class:Participant
+events_UTCE	onlineModels.py	/^    events_UTCE = db.relationship('UnitTypeChangeEvent', back_populates = 'participant')$/;"	v	class:Participant
+expansion	onlineModels.py	/^    expansion = db.Column(db.Text)$/;"	v	class:Game
+ff_minerals_lost_army	onlineModels.py	/^    ff_minerals_lost_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+ff_minerals_lost_economy	onlineModels.py	/^    ff_minerals_lost_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+ff_minerals_lost_technology	onlineModels.py	/^    ff_minerals_lost_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+ff_vespene_lost_army	onlineModels.py	/^    ff_vespene_lost_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+ff_vespene_lost_economy	onlineModels.py	/^    ff_vespene_lost_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+ff_vespene_lost_technology	onlineModels.py	/^    ff_vespene_lost_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+food_made	onlineModels.py	/^    food_made = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+food_used	onlineModels.py	/^    food_used = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+game	onlineModels.py	/^    game = db.relationship('Game', secondary = 'participants_games', back_populates = 'participants')$/;"	v	class:Participant
+game_id	onlineModels.py	/^    game_id = db.Column(db.Integer, db.ForeignKey('games.id'))$/;"	v	class:Participants_Games
+game_winner	onlineModels.py	/^    game_winner = db.Column(db.Text)$/;"	v	class:Game
+generatePaths	onlineTransfer.py	/^    def generatePaths(self):$/;"	m	class:Transfer
+get_col_names	onlineModels.py	/^    def get_col_names(cls):$/;"	m	class:UnitBornEvent
+get_col_names	onlineModels.py	/^    def get_col_names(cls):$/;"	m	class:UnitDiedEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:BasicCommandEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:Game
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:Participant
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:Participants_Games
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:Participants_Users
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:PlayerStatsEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:TargetPointCommandEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:UnitBornEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:UnitDiedEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:UnitDoneEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:UnitInitEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:UnitTypeChangeEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:UpgradeCompleteEvent
+id	onlineModels.py	/^    id = db.Column(db.Integer, primary_key = True)$/;"	v	class:User
+injectIntoDataBase	onlineInject.py	/^    def injectIntoDataBase(self, game, users, participants, replayEvents):$/;"	m	class:Inject
+killing_unit	onlineModels.py	/^    killing_unit = db.Column(db.Text)$/;"	v	class:UnitDiedEvent
+league	onlineModels.py	/^    league = db.Column(db.Text)$/;"	v	class:Participant
+loc_x	onlineModels.py	/^    loc_x = db.Column(db.Float)$/;"	v	class:TargetPointCommandEvent
+loc_x	onlineModels.py	/^    loc_x = db.Column(db.Float)$/;"	v	class:UnitBornEvent
+loc_x	onlineModels.py	/^    loc_x = db.Column(db.Float)$/;"	v	class:UnitDiedEvent
+loc_x	onlineModels.py	/^    loc_x = db.Column(db.Float)$/;"	v	class:UnitInitEvent
+loc_y	onlineModels.py	/^    loc_y = db.Column(db.Float)$/;"	v	class:TargetPointCommandEvent
+loc_y	onlineModels.py	/^    loc_y = db.Column(db.Float)$/;"	v	class:UnitBornEvent
+loc_y	onlineModels.py	/^    loc_y = db.Column(db.Float)$/;"	v	class:UnitDiedEvent
+loc_y	onlineModels.py	/^    loc_y = db.Column(db.Float)$/;"	v	class:UnitInitEvent
+map	onlineModels.py	/^    map = db.Column(db.Text)$/;"	v	class:Game
+minerals_collection_rate	onlineModels.py	/^    minerals_collection_rate = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_current	onlineModels.py	/^    minerals_current = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_killed	onlineModels.py	/^    minerals_killed = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_killed_army	onlineModels.py	/^    minerals_killed_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_killed_economy	onlineModels.py	/^    minerals_killed_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_killed_technology	onlineModels.py	/^    minerals_killed_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_lost	onlineModels.py	/^    minerals_lost = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_lost_army	onlineModels.py	/^    minerals_lost_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_lost_economy	onlineModels.py	/^    minerals_lost_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_lost_technology	onlineModels.py	/^    minerals_lost_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_used_active_forces	onlineModels.py	/^    minerals_used_active_forces = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_used_current	onlineModels.py	/^    minerals_used_current = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_used_current_army	onlineModels.py	/^    minerals_used_current_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_used_current_economy	onlineModels.py	/^    minerals_used_current_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_used_current_technology	onlineModels.py	/^    minerals_used_current_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_used_in_progress	onlineModels.py	/^    minerals_used_in_progress = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_used_in_progress_army	onlineModels.py	/^    minerals_used_in_progress_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_used_in_progress_economy	onlineModels.py	/^    minerals_used_in_progress_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+minerals_used_in_progress_technology	onlineModels.py	/^    minerals_used_in_progress_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:BasicCommandEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:Game
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:Participant
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:PlayerStatsEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:TargetPointCommandEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:UnitBornEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:UnitDiedEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:UnitDoneEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:UnitInitEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:UnitTypeChangeEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:UpgradeCompleteEvent
+name	onlineModels.py	/^    name = db.Column(db.Text)$/;"	v	class:User
+participant	onlineModels.py	/^    participant = db.relationship('Participant', back_populates = 'events_BCE')$/;"	v	class:BasicCommandEvent
+participant	onlineModels.py	/^    participant = db.relationship('Participant', back_populates = 'events_PSE')$/;"	v	class:PlayerStatsEvent
+participant	onlineModels.py	/^    participant = db.relationship('Participant', back_populates = 'events_TPE')$/;"	v	class:TargetPointCommandEvent
+participant	onlineModels.py	/^    participant = db.relationship('Participant', back_populates = 'events_UBE')$/;"	v	class:UnitBornEvent
+participant	onlineModels.py	/^    participant = db.relationship('Participant', back_populates = 'events_UCE')$/;"	v	class:UpgradeCompleteEvent
+participant	onlineModels.py	/^    participant = db.relationship('Participant', back_populates = 'events_UDE')$/;"	v	class:UnitDoneEvent
+participant	onlineModels.py	/^    participant = db.relationship('Participant', back_populates = 'events_UDiE')$/;"	v	class:UnitDiedEvent
+participant	onlineModels.py	/^    participant = db.relationship('Participant', back_populates = 'events_UIE')$/;"	v	class:UnitInitEvent
+participant	onlineModels.py	/^    participant = db.relationship('Participant', back_populates = 'events_UTCE')$/;"	v	class:UnitTypeChangeEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:BasicCommandEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:Game
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:PlayerStatsEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:TargetPointCommandEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:UnitBornEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:UnitDiedEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:UnitDoneEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:UnitInitEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:UnitTypeChangeEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:UpgradeCompleteEvent
+participant_id	onlineModels.py	/^    participant_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:User
+participants	onlineModels.py	/^    participants = db.relationship('Participant', secondary = 'participants_games', back_populates = 'game')$/;"	v	class:Game
+participants	onlineModels.py	/^    participants = db.relationship('Participant', secondary = 'participants_users', back_populates = 'user')$/;"	v	class:User
+player_id	onlineModels.py	/^    player_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:Participants_Games
+player_id	onlineModels.py	/^    player_id = db.Column(db.Integer, db.ForeignKey('participants.id'))$/;"	v	class:Participants_Users
+playrace	onlineModels.py	/^    playrace = db.Column(db.Text)$/;"	v	class:Participant
+pull	onlinePull.py	/^    def pull(self):$/;"	m	class:Pull
+query	onlineTable.py	/^    def query(self):$/;"	m	class:Table
+queryUser	onlineInject.py	/^    def queryUser(self, id):$/;"	m	class:Inject
+region	onlineModels.py	/^    region = db.Column(db.Text)$/;"	v	class:User
+resources_killed	onlineModels.py	/^    resources_killed = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+resources_lost	onlineModels.py	/^    resources_lost = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+resources_used_current	onlineModels.py	/^    resources_used_current = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+resources_used_in_progress	onlineModels.py	/^    resources_used_in_progress = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+run	onlineInject.py	/^    def run(self):$/;"	m	class:Inject
+run	onlinePull.py	/^    def run(self):$/;"	m	class:Pull
+run	onlineScrape.py	/^    def run(self):$/;"	m	class:Scrape
+run	onlineTransfer.py	/^    def run(self):$/;"	m	class:Transfer
+scaled_rating	onlineModels.py	/^    scaled_rating = db.Column(db.Integer)$/;"	v	class:Participant
+second	onlineModels.py	/^    second = db.Column(db.Float)$/;"	v	class:BasicCommandEvent
+second	onlineModels.py	/^    second = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+second	onlineModels.py	/^    second = db.Column(db.Float)$/;"	v	class:TargetPointCommandEvent
+second	onlineModels.py	/^    second = db.Column(db.Float)$/;"	v	class:UnitBornEvent
+second	onlineModels.py	/^    second = db.Column(db.Float)$/;"	v	class:UnitDiedEvent
+second	onlineModels.py	/^    second = db.Column(db.Float)$/;"	v	class:UnitDoneEvent
+second	onlineModels.py	/^    second = db.Column(db.Float)$/;"	v	class:UnitInitEvent
+second	onlineModels.py	/^    second = db.Column(db.Float)$/;"	v	class:UnitTypeChangeEvent
+second	onlineModels.py	/^    second = db.Column(db.Float)$/;"	v	class:UpgradeCompleteEvent
+server	createonlineDB.py	/^server = Flask(__name__)$/;"	v
+sites	runonlineDB.py	/^sites = [ 'ggg', 'lotv']$/;"	v
+start_time	onlineModels.py	/^    start_time = db.Column(db.DateTime)$/;"	v	class:Game
+subregion	onlineModels.py	/^    subregion = db.Column(db.Integer)$/;"	v	class:User
+time_zone	onlineModels.py	/^    time_zone = db.Column(db.Float)$/;"	v	class:Game
+unique_event_names	onlineTable.py	/^    def unique_event_names(self):$/;"	m	class:Table
+unit	onlineModels.py	/^    unit = db.Column(db.Text)$/;"	v	class:UnitDiedEvent
+unit	onlineModels.py	/^    unit = db.Column(db.Text)$/;"	v	class:UnitDoneEvent
+unit	onlineModels.py	/^    unit = db.Column(db.Text)$/;"	v	class:UnitTypeChangeEvent
+unit_type_name	onlineModels.py	/^    unit_type_name = db.Column(db.Text)$/;"	v	class:UnitBornEvent
+unit_type_name	onlineModels.py	/^    unit_type_name = db.Column(db.Text)$/;"	v	class:UnitInitEvent
+unit_type_name	onlineModels.py	/^    unit_type_name = db.Column(db.Text)$/;"	v	class:UnitTypeChangeEvent
+upgrade_type_name	onlineModels.py	/^    upgrade_type_name = db.Column(db.Text)$/;"	v	class:UpgradeCompleteEvent
+user	onlineModels.py	/^    user = db.relationship('User', secondary = 'participants_users', back_populates = 'participants')$/;"	v	class:Participant
+user_id	onlineModels.py	/^    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))$/;"	v	class:Participants_Users
+vespene_collection_rate	onlineModels.py	/^    vespene_collection_rate = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_current	onlineModels.py	/^    vespene_current = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_killed	onlineModels.py	/^    vespene_killed = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_killed_army	onlineModels.py	/^    vespene_killed_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_killed_economy	onlineModels.py	/^    vespene_killed_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_killed_technology	onlineModels.py	/^    vespene_killed_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_lost	onlineModels.py	/^    vespene_lost = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_lost_army	onlineModels.py	/^    vespene_lost_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_lost_economy	onlineModels.py	/^    vespene_lost_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_lost_technology	onlineModels.py	/^    vespene_lost_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_used_active_forces	onlineModels.py	/^    vespene_used_active_forces = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_used_current	onlineModels.py	/^    vespene_used_current = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_used_current_army	onlineModels.py	/^    vespene_used_current_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_used_current_economy	onlineModels.py	/^    vespene_used_current_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_used_current_technology	onlineModels.py	/^    vespene_used_current_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_used_in_progress	onlineModels.py	/^    vespene_used_in_progress = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_used_in_progress_army	onlineModels.py	/^    vespene_used_in_progress_army = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_used_in_progress_economy	onlineModels.py	/^    vespene_used_in_progress_economy = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+vespene_used_in_progress_technology	onlineModels.py	/^    vespene_used_in_progress_technology = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+winner	onlineModels.py	/^    winner = db.Column(db.Boolean)$/;"	v	class:Participant
+workers_active_count	onlineModels.py	/^    workers_active_count = db.Column(db.Float)$/;"	v	class:PlayerStatsEvent
+writelastKnownFileLocation	onlineScrape.py	/^    def writelastKnownFileLocation(self, newlastKnownLocation):$/;"	m	class:Scrape

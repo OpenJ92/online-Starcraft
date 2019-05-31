@@ -3,7 +3,7 @@ from onlineScrape import Scrape
 from onlineInject import Inject
 from onlinePull import Pull
 from onlineTransfer import Transfer
-# 'sc2r',
+
 sites = [ 'ggg', 'lotv']
 
 for site in sites:

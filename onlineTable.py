@@ -7,17 +7,23 @@ from onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEven
                          UnitTypeChangeEvent, UpgradeCompleteEvent, UnitDoneEvent, \
                          BasicCommandEvent, TargetPointCommandEvent, UnitDiedEvent, UnitInitEvent
 
+import pandas as pd
+import numpy as np
 
 class Table():
-    def __init__(self):
+    def __init__(self, participant, event):
+        self.participant = participant
+        self.event = event
+        self.table = self.create_table()
+
+    def __getitem__(self, idx):
         pass
 
-    # look to add unit died event measure to these tables.
     def event_Dictionary(self):
         UBE_t = ['Banshee', 'Cyclone', 'Marine', 'Medivac', 'Raven', 'Reaper',
                 'SiegeTank', 'VikingFighter', 'Hellion', 'Liberator', 'Thor',
                 'Marauder', 'WidowMine', 'HellionTank', 'Battlecruiser', 'Ghost', 'SCV']
-        UBE_z = ['Roach', 'Baneling', 'Mutalisk', 'Queen', 'Zergling', 'Corruptor',
+        UBE_z = ["Larva", 'Roach', 'Baneling', 'Mutalisk', 'Queen', 'Zergling', 'Corruptor',
                 'Hydralisk', 'Viper', 'Ultralisk', 'Drone', 'Overlord']
         UBE_p = ['Stalker', 'Colossus', 'Disruptor', 'Immortal', 'WarpPrism',
                  'Observer', 'Adept', 'Phoenix', 'Oracle', 'Zealot', 'Sentry',
@@ -50,7 +56,7 @@ class Table():
         UDE_p = ['CyberneticsCore', 'DarkShrine', 'Forge', 'Nexus', 'ShieldBattery', 'TemplarArchive',
                  'TwilightCouncil', 'WarpGate', 'RoboticsBay', 'RoboticsFacility', 'Stargate',
                  'PhotonCannon', 'FleetBeacon', 'Gateway']
-
+        
         BCE_t = ['BuildSiegeTank', 'TrainBanshee', 'TrainCyclone', 'TrainLiberator', 'TrainMarine',
                  'TrainMedivac', 'TrainRaven', 'TrainReaper', 'TrainViking', 'BuildHellion', 'BuildThor',
                  'TrainMarauder', 'BuildWidowMine', 'TrainBattlecruiser', 'TrainGhost', 'BuildBattleHellion',
@@ -63,11 +69,11 @@ class Table():
                  'TrainSentry', 'TrainTempest', 'TrainCarrier', 'TrainVoidRay', 'TrainMothership',
                  'TrainInterceptor', 'TrainProbe']
 
-        return {'UBE': {'Terran': UBE_t,'Zerg': UBE_z,'Protoss': UBE_p, 'event_column': 'unit_type_name'},
-                'TPE': {'Terran': TPE_t,'Zerg': TPE_z,'Protoss': TPE_p, 'event_column': 'ability_name'},
-            'UDE': {'Terran': UDE_t,'Zerg': UDE_z,'Protoss': UDE_p, 'event_column': 'unit'},
-            'BCE': {'Terran': BCE_t,'Zerg': BCE_z,'Protoss': BCE_p, 'event_column': 'ability_name'},
-            'drop_add': ['participant_id', 'second']}
+        return {'UBE': {'Terran': UBE_t, 'Zerg': UBE_z, 'Protoss': UBE_p, 'event_column': 'unit_type_name'},
+                'TPE': {'Terran': TPE_t, 'Zerg': TPE_z, 'Protoss': TPE_p, 'event_column': 'ability_name'},
+                'UDE': {'Terran': UDE_t, 'Zerg': UDE_z, 'Protoss': UDE_p, 'event_column': 'unit'},
+                'BCE': {'Terran': BCE_t, 'Zerg': BCE_z, 'Protoss': BCE_p, 'event_column': 'ability_name'},
+                'drop_add': ['participant_id', 'second']}
 
     def unique_event_names(self):
         event_dictionary_ = self.event_Dictionary()
@@ -76,13 +82,29 @@ class Table():
                 'UDE': event_dictionary_['UDE']['Terran'] + event_dictionary_['UDE']['Zerg'] + event_dictionary_['UDE']['Protoss'],
                 'BCE': event_dictionary_['BCE']['Terran'] + event_dictionary_['BCE']['Zerg'] + event_dictionary_['BCE']['Protoss']}
 
-
-
-    def query(self):
-        pass
-
     def create_table(self):
-        pass
+        events_ = self.participant.events_(self.event)
+        event_Dataframe = pd.DataFrame([vars(event) for event in events_])
+
+        full_Dataframe_dummies = pd.DataFrame(columns = self.unique_event_names()[self.event])
+        event_Dataframe_dummies = pd.get_dummies(event_Dataframe[self.event_Dictionary()[self.event]["event_column"]])
+        full_event_Dataframe_dummies = pd.concat([full_Dataframe_dummies, event_Dataframe_dummies], axis = 1)[self.unique_event_names()[self.event]].fillna(0)
+
+        return full_event_Dataframe_dummies
+
+
+    ## Now that we have our tables constructed, we need to build two modules. First, we need to find the weighted first principle
+    ## vector for our events and then, using out hypersphere construction, convert those rectangular coordinates into hyperspherical
+    ## coordinates (See hypersphere tab for a functional construction of hyperspheres.). In that theta space is where we will carry 
+    ## our our clustering analysis and sample from. We'll also use that space to dictate the actions our AI will take in game. That is
+    ## our AI will take action in order to shift its current principle component in the direction of the center of mass that is it's 
+    ## desired startegy on theta space.
 
 if __name__ == '__main__':
-    pass
+    p = db.session.query(Participant)[5]
+    tUBE = Table(p, "UBE")
+    tTPE = Table(p, "TPE")
+    tUDE = Table(p, "UDE")
+    tBCE = Table(p, "BCE")
+
+
