@@ -6,7 +6,6 @@ from onlineDB.database.replays.onlineModels import Participant, User, Game, Play
 from onlineDB.database.FSV.onlineModels import db as FSV_db
 from onlineDB.database.FSV.onlineModels import FSV
 from onlineDB.HyperSphere.resolveDirection import resolveDirection
-from sklearn.decomposition import TruncatedSVD
 from scipy.linalg import svd
 
 class SVD:
@@ -22,7 +21,6 @@ class SVD:
 
     def database_inject(self):
         components_ = self.tSVD[2].tobytes()
-        import pdb;pdb.set_trace()
         fsv = FSV(user_id = self.participant.user[0].id,
                   participant_id = self.participant.id,
                   game_id = self.participant.game[0].id,

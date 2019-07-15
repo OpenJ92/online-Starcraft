@@ -8,6 +8,8 @@ class FSV(db.Model):
     user_id = db.Column(db.Integer)
     participant_id = db.Column(db.Integer)
     game_id = db.Column(db.Integer)
-    fsv = db.Column(db.Text)
+    event_name = db.Column(db.Text)
+    fsv = db.Column(db.Text) # .tobytes() method on n.arrays
+    fsv_shape = db.Column(db.Text) # .tobytes() method on n.arrays
 
 db.create_all()
