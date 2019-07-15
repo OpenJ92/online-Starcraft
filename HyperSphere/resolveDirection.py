@@ -1,6 +1,6 @@
 import numpy as np
-from onlineDB.HyperSphere2.hyperSphere import hyperSphere
-from onlineDB.HyperSphere2.Polynomial import Polynomial
+from onlineDB.HyperSphere.hyperSphere import hyperSphere
+from onlineDB.HyperSphere.Polynomial import Polynomial
 from sklearn.mixture import GaussianMixture
 
 class resolveDirection:

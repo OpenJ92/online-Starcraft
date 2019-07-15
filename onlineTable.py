@@ -1,8 +1,8 @@
 # this class will take in a query of the database and construct a pd.DataFrame # or numpy.ndarray fo the queried informationself.
 
 # Note: Be sure to start pulling in replays from previous project. ie ~/Personal_Project/Starcraft_2/sc2reader/SCReplays
-from onlineDB.onlineModels import db
-from onlineDB.onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
+from onlineDB.database.replays.onlineModels import db
+from onlineDB.database.replays.onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
                          UnitTypeChangeEvent, UpgradeCompleteEvent, UnitDoneEvent, \
                          BasicCommandEvent, TargetPointCommandEvent, UnitDiedEvent, UnitInitEvent
 import pandas as pd

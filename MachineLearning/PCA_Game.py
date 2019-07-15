@@ -1,9 +1,9 @@
 from onlineDB.onlineTable import Table
-from onlineDB.onlineModels import db
-from onlineDB.onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
+from onlineDB.database.replays.onlineModels import db
+from onlineDB.database.replays.onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
                          UnitTypeChangeEvent, UpgradeCompleteEvent, UnitDoneEvent, \
                          BasicCommandEvent, TargetPointCommandEvent, UnitDiedEvent, UnitInitEvent
-from onlineDB.HyperSphere2.resolveDirection import resolveDirection
+from onlineDB.HyperSphere.resolveDirection import resolveDirection
 from sklearn.decomposition import PCA
 
 class PCA_:

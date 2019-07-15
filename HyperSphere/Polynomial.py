@@ -1,6 +1,6 @@
 import numpy as np
 from functools import reduce
-from onlineDB.HyperSphere2.hyperSphere import hyperSphere
+from onlineDB.HyperSphere.hyperSphere import hyperSphere
 
 class Polynomial:
     def __init__(self, coefficents):

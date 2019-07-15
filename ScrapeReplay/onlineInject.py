@@ -25,9 +25,9 @@
 #             |
 #           events ()
 
-from createonlineDB import db
+from onlineDB.database.replays.createonlineDB import db
 import sc2reader
-from onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
+from onlineDB.database.replays.onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
                          UnitTypeChangeEvent, UpgradeCompleteEvent, UnitDoneEvent, \
                          BasicCommandEvent, TargetPointCommandEvent, UnitDiedEvent, UnitInitEvent
 

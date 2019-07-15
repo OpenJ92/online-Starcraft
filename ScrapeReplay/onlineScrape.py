@@ -21,13 +21,13 @@ class Scrape():
 
     def dictMeta(self):
         return {'ggg': {'link': 'https://gggreplays.com/matches/',
-                        'directorylink' : '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/scrapeMetaData/ggg.txt',
+                        'directorylink' : '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/ScrapeReplay/scrapeMetaData/ggg.txt',
                         'downloadLink': '/replay'},
                 'lotv': {'link': 'https://lotv.spawningtool.com/',
-                        'directorylink' : '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/scrapeMetaData/lotv.txt',
+                        'directorylink' : '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/ScrapeReplay/scrapeMetaData/lotv.txt',
                        'downloadLink' : '/download'},
                 'sc2r': {'link': 'http://sc2replaystats.com/',
-                         'directorylink' : '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/scrapeMetaData/sc2r.txt',
+                         'directorylink' : '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/ScrapeReplay/scrapeMetaData/sc2r.txt',
                          'downloadLink' : 'download/'}}
 
     def accesslastKnownFileLocation(self):
@@ -50,8 +50,7 @@ class Scrape():
         while not exp:
             try:
                 local_filename, headers = urllib.request.urlretrieve(self.downloadLink(currentLocation),
-                                                                     filename = '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/temporaryReplayContainer/' + self.website_ + '/' + str(currentLocation) + '.SC2Replay')
-                # wget.download(self.downloadLink(currentLocation),'/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/temporaryReplayContainer/' + self.website_ + '/' + str(currentLocation) + '.SC2Replay')
+                                                                     filename = '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/ScrapeReplay/temporaryReplayContainer/' + self.website_ + '/' + str(currentLocation) + '.SC2Replay')
                 currentLocation += 1
                 if currentLocation - currentLocation_ > 50:
                     exp = True

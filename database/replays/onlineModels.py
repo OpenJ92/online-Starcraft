@@ -1,4 +1,4 @@
-from onlineDB.createonlineDB import db
+from onlineDB.database.replays.createonlineDB import db
 from datetime import datetime
 
 #|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

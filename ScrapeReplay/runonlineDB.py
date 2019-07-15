@@ -4,7 +4,7 @@ from onlineInject import Inject
 from onlinePull import Pull
 from onlineTransfer import Transfer
 
-sites = [ 'ggg', 'lotv']
+sites = ['ggg', 'lotv']
 
 for site in sites:
     Scrape(site).run() #Scrape content from website
