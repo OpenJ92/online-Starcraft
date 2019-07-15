@@ -5,7 +5,6 @@ class FSV(db.Model):
     __tablename__ = "FSV"
     
     id = db.Column(db.Integer, primary_key = True)
-
     user_id = db.Column(db.Integer)
     participant_id = db.Column(db.Integer)
     game_id = db.Column(db.Integer)

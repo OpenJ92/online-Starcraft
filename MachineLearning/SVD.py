@@ -21,9 +21,15 @@ class SVD:
         return U, s_, VT
 
     def database_inject(self):
-        components_ = self.tSVD.components_[:,0].tobytes()
-        pass
+        components_ = self.tSVD[2].tobytes()
+        import pdb;pdb.set_trace()
+        fsv = FSV(user_id = self.participant.user[0].id,
+                  participant_id = self.participant.id,
+                  game_id = self.participant.game[0].id,
+                  fsv = components_)
+        FSV_db.session.add_all([fsv])
+        FSV_db.session.commit()
 
 if __name__ == "__main__":
     p = db.session.query(Participant)[20]
-    pca = SVD(p, "UBE", FSV_db)
+    A = SVD(p, "UBE", FSV_db)
