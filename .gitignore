@@ -1,3 +1,5 @@
 *.SC2Replay
 *.db
 _env/
+*.txt
+ONLINESTARCRAFT/

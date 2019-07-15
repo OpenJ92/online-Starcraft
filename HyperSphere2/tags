@@ -1,0 +1,87 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Add	Add.py	/^class Add(Operation):$/;"	c
+Loop	Loop.py	/^class Loop:$/;"	c
+Multiply	Multiply.py	/^class Multiply(Operation):$/;"	c
+Operation	Operation.py	/^class Operation:$/;"	c
+Solve	Solve.py	/^class Solve:$/;"	c
+__call__	Add.py	/^    def __call__(self, theta):$/;"	m	class:Add	file:
+__call__	Bezier.py	/^    def __call__(self, t):$/;"	m	class:bezierCurve	file:
+__call__	Loop.py	/^    def __call__(self):$/;"	m	class:Loop	file:
+__call__	Multiply.py	/^    def __call__(self, theta):$/;"	m	class:Multiply	file:
+__call__	controlPoints.py	/^    def __call__(self, sample_points):$/;"	m	class:controlPointsUniformRandomEnclosingPrism	file:
+__call__	controlPoints.py	/^    def __call__(self, sample_points):$/;"	m	class:controlPointsVertebralWalk	file:
+__call__	hyperSphere.py	/^    def __call__(self, theta):$/;"	m	class:hyperSphere	file:
+__call__	resolveDirection.py	/^    def __call__(self):$/;"	m	class:resolveDirection	file:
+__init__	Add.py	/^    def __init__(self, *hyperSpheres):$/;"	m	class:Add
+__init__	Bezier.py	/^    def __init__(self, shape_in, shape_out, control_points):$/;"	m	class:bezierCurve
+__init__	Loop.py	/^    def __init__(self, domain_in,$/;"	m	class:Loop
+__init__	Multiply.py	/^    def __init__(self, *hyperSpheres):$/;"	m	class:Multiply
+__init__	Operation.py	/^    def __init__(self, *hyperSpheres):$/;"	m	class:Operation
+__init__	Solve.py	/^    def __init__(self, function, domain_dimension, pos = None, num_samples = 5000, num_iterations = 500, learning_rate = .01):$/;"	m	class:Solve
+__init__	controlPoints.py	/^    def __init__(self, shape_in, shape_out):$/;"	m	class:controlPointsUniformRandomEnclosingPrism
+__init__	controlPoints.py	/^    def __init__(self, shape_in, shape_out, spinous_process, func = lambda t: (t*np.pi\/10,1\/(t+1))):$/;"	m	class:controlPointsVertebralWalk
+__init__	hyperSphere.py	/^    def __init__(self, dims, offset = None):$/;"	m	class:hyperSphere
+__init__	resolveDirection.py	/^    def __init__(self, vector, iterations = 200):$/;"	m	class:resolveDirection
+a	test.py	/^    a = Add(hS, *[hS1 for i in range(n)])$/;"	v
+adjust	Loop.py	/^    adjust = np.ones_like(sample)*np.pi*2$/;"	v
+bezier	Bezier.py	/^    bezier = bezierCurve(shape_in,shape_out, control_points)$/;"	v	class:bezierCurve
+bezierCurve	Bezier.py	/^class bezierCurve():$/;"	c
+construct_control_points	controlPoints.py	/^    def construct_control_points(self, sample_points):$/;"	m	class:controlPointsUniformRandomEnclosingPrism
+construct_control_points	controlPoints.py	/^    def construct_control_points(self, sample_points):$/;"	m	class:controlPointsVertebralWalk
+container	Operation.py	/^    def container(self, shift_):$/;"	m	class:Operation
+container_hyper_rectangle	Multiply.py	/^    def container_hyper_rectangle(self, container_):$/;"	m	class:Multiply
+container_vector	Add.py	/^    def container_vector(self, container_):$/;"	m	class:Add
+container_vector	Multiply.py	/^    def container_vector(self, container_hyper_rectangle_):$/;"	m	class:Multiply
+control1	controlPoints.py	/^    control1 = controlPointsVertebralWalk(shape_in, shape_out, np.array([1,1,1]))$/;"	v
+control2	controlPoints.py	/^    control2 = controlPointsUniformRandomEnclosingPrism(shape_in, shape_out)$/;"	v
+controlPointsUniformRandomEnclosingPrism	controlPoints.py	/^class controlPointsUniformRandomEnclosingPrism():$/;"	c
+controlPointsVertebralWalk	controlPoints.py	/^class controlPointsVertebralWalk():$/;"	c
+control_points	Bezier.py	/^    control_points = controlPointsUniformRandomEnclosingPrism(shape_in, shape_out)(10)$/;"	v	class:bezierCurve
+domain_ball	resolveDirection.py	/^    def domain_ball(self, sub_domain, radius = .5):$/;"	m	class:resolveDirection
+evaluate	Bezier.py	/^    def evaluate(self, t):$/;"	m	class:bezierCurve
+f	Solve.py	/^    def f(o):$/;"	m	class:Solve
+hS	test.py	/^    hS = hyperSphere(2)$/;"	v
+hS1	test.py	/^    hS1 = hyperSphere(3)$/;"	v
+hyperSphere	hyperSphere.py	/^class hyperSphere:$/;"	c
+hyperSphere_sample	Solve.py	/^    def hyperSphere_sample(self):$/;"	m	class:Solve
+hyper_spheres	Loop.py	/^    hyper_spheres = [hyperSphere(2), hyperSphere(3), hyperSphere(3)]$/;"	v
+hyper_spheres	test.py	/^    hyper_spheres = [hyperSphere(2), hyperSphere(3), hyperSphere(3)]$/;"	v
+loops	Loop.py	/^    loops = [Loop(sample, sample+adjust) for _ in range(9)]$/;"	v
+loops	test.py	/^    loops = [Loop(sample) for _ in range(4)]$/;"	v
+m	test.py	/^    m = Multiply(hS, *[hS1 for i in range(n)])$/;"	v
+m_	test.py	/^    m_ = Multiply(hS, hS)$/;"	v
+make_add	Add.py	/^    def make_add(self):$/;"	m	class:Add
+make_domain_range	resolveDirection.py	/^    def make_domain_range(self, domain, domain_ball):$/;"	m	class:resolveDirection
+make_product	Multiply.py	/^    def make_product(self):$/;"	m	class:Multiply
+make_unit	controlPoints.py	/^    def make_unit(self, v):$/;"	m	class:controlPointsVertebralWalk
+measure_	resolveDirection.py	/^    def measure_(self, domain_, range_, n = 20):$/;"	m	class:resolveDirection
+mhs	hyperSphere.py	/^    def mhs(self, dims):$/;"	m	class:hyperSphere
+n	Bezier.py	/^    n = 4$/;"	v	class:bezierCurve
+n	test.py	/^    n = 2$/;"	v
+optimize	resolveDirection.py	/^    def optimize(self):$/;"	m	class:resolveDirection
+plot_Loop	test.py	/^def plot_Loop(*loop):$/;"	f
+rD	resolveDirection.py	/^    rD = resolveDirection(vector)$/;"	v	class:resolveDirection
+resolveDirection	resolveDirection.py	/^class resolveDirection:$/;"	c
+rotate_Axis_Matrix	controlPoints.py	/^    def rotate_Axis_Matrix(self, theta):$/;"	m	class:controlPointsVertebralWalk
+s	Solve.py	/^    s = Solve(f, 3)$/;"	v	class:Solve
+sample	Bezier.py	/^    def sample(self, sample_size):$/;"	m	class:bezierCurve
+sample	Loop.py	/^    sample = np.ones(4)$/;"	v
+sample	Multiply.py	/^    def sample(self, sample_size):$/;"	m	class:Multiply
+sample	hyperSphere.py	/^    def sample(self, sample_size):$/;"	m	class:hyperSphere
+sample	test.py	/^    sample = np.ones(3)$/;"	v
+sample_domain_sub_domain	resolveDirection.py	/^    def sample_domain_sub_domain(self, domain = None, samples = 100):$/;"	m	class:resolveDirection
+shape_in	Bezier.py	/^    shape_in = np.random.random_sample(size = n)$/;"	v	class:bezierCurve
+shape_in	controlPoints.py	/^    shape_in = np.array([10, 128, 128])$/;"	v
+shape_out	Bezier.py	/^    shape_out = np.array([np.pi*2 for i in range(n)])$/;"	v	class:bezierCurve
+shape_out	controlPoints.py	/^    shape_out = np.array([100, 4, 4])$/;"	v
+shift	Operation.py	/^    def shift(self):$/;"	m	class:Operation
+solve	Solve.py	/^    def solve(self):$/;"	m	class:Solve
+spine	controlPoints.py	/^    def spine(self):$/;"	m	class:controlPointsVertebralWalk
+test_angle	test.py	/^def test_angle(hypS, sample_size):$/;"	f
+test_unit	test.py	/^def test_unit(hypS, sample_size):$/;"	f
+vector	resolveDirection.py	/^    vector = hyperSphere([])$/;"	v	class:resolveDirection

@@ -25,7 +25,7 @@ class Scrape():
                         'downloadLink': '/replay'},
                 'lotv': {'link': 'https://lotv.spawningtool.com/',
                         'directorylink' : '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/scrapeMetaData/lotv.txt',
-                        'downloadLink' : '/download'},
+                       'downloadLink' : '/download'},
                 'sc2r': {'link': 'http://sc2replaystats.com/',
                          'directorylink' : '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/scrapeMetaData/sc2r.txt',
                          'downloadLink' : 'download/'}}
