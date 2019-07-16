@@ -11,6 +11,7 @@ from scipy.linalg import svd
 class SVD:
     def __init__(self, participant, event_name, db_):
         self.participant = participant
+        self.event_name = event_name
         self.db = db_
         self.table = Table(self.participant, event_name)
         self.tSVD = self.tSVD()
@@ -21,10 +22,15 @@ class SVD:
 
     def database_inject(self):
         components_ = self.tSVD[2]
+        components_shape = np.array(components_.shape)
+
         fsv = FSV(user_id = self.participant.user[0].id,
                   participant_id = self.participant.id,
                   game_id = self.participant.game[0].id,
-                  fsv = components_)
+                  event_name = self.event_name,
+                  fsv = components_.tobytes(),
+                  fsv_shape = components_shape.tobytes())
+
         FSV_db.session.add_all([fsv])
         FSV_db.session.commit()
 
