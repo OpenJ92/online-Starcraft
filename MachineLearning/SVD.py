@@ -1,10 +1,10 @@
-from onlineDB.onlineTable import Table
-from onlineDB.database.replays.onlineModels import db
-from onlineDB.database.replays.onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
+from onlineDB.Transform.onlineTable import Table
+from onlineDB.Database.replays.onlineModels import db
+from onlineDB.Database.replays.onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
                          UnitTypeChangeEvent, UpgradeCompleteEvent, UnitDoneEvent, \
                          BasicCommandEvent, TargetPointCommandEvent, UnitDiedEvent, UnitInitEvent
-from onlineDB.database.FSV.onlineModels import db as FSV_db
-from onlineDB.database.FSV.onlineModels import FSV
+from onlineDB.Database.FSV.onlineModels import db as FSV_db
+from onlineDB.Database.FSV.onlineModels import FSV
 from onlineDB.HyperSphere.resolveDirection import resolveDirection
 from scipy.linalg import svd
 
@@ -20,7 +20,7 @@ class SVD:
         return U, s_, VT
 
     def database_inject(self):
-        components_ = self.tSVD[2].tobytes()
+        components_ = self.tSVD[2]
         fsv = FSV(user_id = self.participant.user[0].id,
                   participant_id = self.participant.id,
                   game_id = self.participant.game[0].id,

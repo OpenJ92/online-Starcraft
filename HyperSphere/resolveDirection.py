@@ -24,7 +24,7 @@ class resolveDirection:
         self.make_domain_range(domain::np.array, domain_ball::np.array)::(::np.array, ::np.array)
         self()::np.array : returns values of self.o
     """
-    def __init__(self, vector, iterations = 200):
+    def __init__(self, vector, iterations = 50):
         self.vector = vector if not isinstance(vector,  Polynomial) else vector.coefficents
         assert np.linalg.norm(self.vector) > 0
         self.hyper_sphere = hyperSphere(len(self.vector))
@@ -38,7 +38,7 @@ class resolveDirection:
     def optimize(self):
         for i in range(self.iterations):
             domain_, sub_domain = self.sample_domain_sub_domain(domain_ if i > 0 else None)
-            domain_ball = self.domain_ball(sub_domain, i + 1)
+            domain_ball = self.domain_ball(sub_domain, 40)
             domain_, range_ = self.make_domain_range(domain_, domain_ball)
             measure__index, domain_ = self.measure_(domain_, range_)
         return domain_ % np.pi*2
@@ -62,6 +62,7 @@ class resolveDirection:
     def measure_(self, domain_, range_, n=20):
         measure__ = np.apply_along_axis(np.linalg.norm, 1, range_ - self.vector)
         measure__index = np.argpartition(measure__, n)
+        print(measure__)
         return measure__index, domain_[measure__index[:n]]
 
 if __name__ == "__main__":

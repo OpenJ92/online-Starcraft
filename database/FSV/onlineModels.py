@@ -1,4 +1,4 @@
-from onlineDB.database.FSV.createonlineDB import db
+from onlineDB.Database.FSV.createonlineDB import db
 from datetime import datetime
 
 class FSV(db.Model):

@@ -1,2 +1,2 @@
-from onlineDB.onlineTable import Table
+from onlineDB.Transform.onlineTable import Table
 import sklearn
