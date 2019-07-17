@@ -21,11 +21,13 @@ class SVD:
         return U, s_, VT
 
     def database_inject(self):
+        if self.db.session.query(FSV).filter(FSV.self_participant_id == self.participant.id):
+            return False
         components_ = self.tSVD[2]
         components_shape = np.array(components_.shape)
 
-        fsv = FSV(user_id = self.participant.user[0].id,
-                  participant_id = self.participant.id,
+        fsv = FSV(self_user_id = self.participant.user[0].id,
+                  self_participant_id = self.participant.id,
                   game_id = self.participant.game[0].id,
                   event_name = self.event_name,
                   fsv = components_.tobytes(),
@@ -35,5 +37,5 @@ class SVD:
         FSV_db.session.commit()
 
 if __name__ == "__main__":
-    p = db.session.query(Participant)[20]
-    A = SVD(p, "UBE", FSV_db)
+    game = db.session.query(Game)[20]
+    A = [SVD(participant, "UBE", FSV_db) for participant in game.participants]

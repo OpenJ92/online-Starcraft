@@ -25,8 +25,8 @@
 #             |
 #           events ()
 
-from onlineDB.Database.replays.createonlineDB import db
 import sc2reader
+from onlineDB.Database.replays.createonlineDB import db
 from onlineDB.Database.replays.onlineModels import Participant, User, Game, PlayerStatsEvent, UnitBornEvent, \
                          UnitTypeChangeEvent, UpgradeCompleteEvent, UnitDoneEvent, \
                          BasicCommandEvent, TargetPointCommandEvent, UnitDiedEvent, UnitInitEvent
@@ -44,13 +44,10 @@ class Inject():
                  'Game': game,
                  'Users': {user.name : user for user in users}
                              }
-            # import pdb; pdb.set_trace()
             if False in [False if replayMetaData[element] in [[], {}] else True for element in replayMetaData.keys()]:
-                # import pdb; pdb.set_trace()
                 pass
             else:
                 replayEvents = [event for event in self.buildEvents(replay, replayMetaData) if event != None]
-                # import pdb; pdb.set_trace()
                 self.injectIntoDataBase(game, users, participants, replayEvents)
 
     def buildEvent(self, event, replayMetaData):
@@ -64,7 +61,6 @@ class Inject():
 
 
     def buildPlayerStatsEvent(self, event, replayMetaData):
-        # import pdb; pdb.set_trace()
         participant_name  = event.player.name
         return PlayerStatsEvent(
              participant = replayMetaData['Participant'][participant_name],
@@ -122,8 +118,8 @@ class Inject():
              ff_vespene_lost_economy = event.ff_vespene_lost_economy,
              ff_vespene_lost_technology = event.ff_vespene_lost_technology
                            )
+
     def buildUnitBornEvent(self, event, replayMetaData):
-        # import pdb; pdb.set_trace()
         particiapnt_name = event.unit_controller.name
         return UnitBornEvent(
               participant = replayMetaData['Participant'][particiapnt_name],
@@ -133,8 +129,8 @@ class Inject():
               loc_x = event.x,
               loc_y = event.y
                             )
+
     def buildUnitTypeChangeEvent(self, event, replayMetaData):
-        # import pdb; pdb.set_trace()
         participant_name = event.unit.owner.name
         return UnitTypeChangeEvent(
             participant = replayMetaData['Participant'][participant_name],
@@ -143,8 +139,8 @@ class Inject():
             unit = event.unit.name,
             unit_type_name = event.unit_type_name
             )
+
     def buildUpgradeCompleteEvent(self, event, replayMetaData):
-        # import pdb; pdb.set_trace()
         participant_name = event.player.name
         return UpgradeCompleteEvent(
              participant = replayMetaData['Participant'][participant_name],
@@ -152,8 +148,8 @@ class Inject():
              second = event.second,
              upgrade_type_name = event.upgrade_type_name
              )
+
     def buildUnitDoneEvent(self, event, replayMetaData):
-        # import pdb; pdb.set_trace()
         participant_name = event.unit.owner.name
         return UnitDoneEvent(
             participant = replayMetaData['Participant'][participant_name],
@@ -161,8 +157,8 @@ class Inject():
             second = event.second,
             unit = event.unit.name
             )
+
     def buildBasicCommandEvent(self, event, replayMetaData):
-        # import pdb; pdb.set_trace()
         participant_name = event.player.name
         return BasicCommandEvent(
             participant = replayMetaData['Participant'][participant_name],
@@ -170,8 +166,8 @@ class Inject():
             second = event.second,
             ability_name = event.ability_name
             )
+
     def buildTargetPointCommandEvent(self, event, replayMetaData):
-        # import pdb; pdb.set_trace()
         participant_name = event.player.name
         return TargetPointCommandEvent(
              participant = replayMetaData['Participant'][participant_name],
@@ -181,8 +177,8 @@ class Inject():
              loc_x = event.x,
              loc_y = event.y
              )
+
     def buildUnitDiedEvent(self, event, replayMetaData):
-        # import pdb; pdb.set_trace()
         participant_name = event.killing_player.name
         return UnitDiedEvent(
               participant = replayMetaData['Participant'][participant_name],
@@ -193,8 +189,8 @@ class Inject():
               loc_x = event.x,
               loc_y = event.y
               )
+
     def buildUnitInitEvent(self, event, replayMetaData):
-        # import pdb; pdb.set_trace()
         participant_name = event.unit_controller.name
         return UnitInitEvent(
               participant = replayMetaData['Participant'][participant_name],
@@ -204,6 +200,7 @@ class Inject():
               loc_x = event.x,
               loc_y = event.y
               )
+
     def eventHASH(self):
         return {
             'PlayerStatsEvent' : self.buildPlayerStatsEvent,
@@ -218,7 +215,6 @@ class Inject():
                 }
 
     def buildParticipant(self, user, game, player):
-        # import pdb; pdb.set_trace()
         return Participant(
            name = user.name,
            user = [user],
@@ -228,7 +224,6 @@ class Inject():
            )
 
     def buildUser(self, player):
-        # import pdb; pdb.set_trace()
         return User(
             name = player.name,
             region = player.region,
@@ -236,11 +231,9 @@ class Inject():
             )
         
     def queryUser(self, id):
-        # import pdb; pdb.set_trace()
         return db.session.query(User).filter_by(id = id).first()
 
     def buildGame(self, replay):
-        # import pdb; pdb.set_trace()
         return Game(
             name = str(replay.date) + '_' + replay.players[0].play_race + ' v ' + replay.players[1].play_race + '_' + replay.players[0].name + ' v ' + replay.players[1].name,
             map = replay.map_name,
@@ -253,11 +246,9 @@ class Inject():
             )
 
     def checkExistanceUser(self, player):
-        # import pdb; pdb.set_trace()
         return db.session.query(User.id).filter(User.name == player.name).first()
 
     def checkExistanceGame(self, replay):
-        # import pdb; pdb.set_trace()
         return db.session.query(Game.id).filter(Game.name == str(replay.date) + '_' + replay.players[0].play_race + ' v ' + replay.players[1].play_race + '_' + replay.players[0].name + ' v ' + replay.players[1].name).first()
 
     def buildReplayMetaData(self, replay):
@@ -268,7 +259,6 @@ class Inject():
                 return [], [], []
             users, participants = [], []
             for player in replay.players:
-                # import pdb; pdb.set_trace()
                 id_ = self.checkExistanceUser(player)
                 user = self.buildUser(player) if not id_ else self.queryUser(id_[0])
                 participant = self.buildParticipant(user, game, player)
@@ -276,7 +266,6 @@ class Inject():
                 participants.append(participant)
             return [game], users, participants
         except Exception as e:
-            # print('buildReplayMetaData - ', e)
             return [], [], []
 
     def injectIntoDataBase(self, game, users, participants, replayEvents):
@@ -284,7 +273,6 @@ class Inject():
             print(game, users)
         except:
             pass
-        #import pdb; pdb.set_trace()
         db.session.add_all(game + users + participants + replayEvents)
         db.session.commit()
 
