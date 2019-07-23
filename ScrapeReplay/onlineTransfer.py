@@ -12,6 +12,6 @@ class Transfer():
         [shutil.move(source+file, destination) for file in files]
 
     def generatePaths(self):
-        source = '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/ScrapeReplay/temporaryReplayContainer/' + self.site_ + '/'
-        destination = '/Users/jacob/Desktop/Personal_Project/Starcraft_2/onlineDB/ScrapeReplay/legacyReplayContainer/' + self.site_ + '/'
+        source = '/Users/jacob/Desktop/Project/Starcraft_2/onlineDB/ScrapeReplay/temporaryReplayContainer/' + self.site_ + '/'
+        destination = '/Users/jacob/Desktop/Project/Starcraft_2/onlineDB/ScrapeReplay/legacyReplayContainer/' + self.site_ + '/'
         return source, destination

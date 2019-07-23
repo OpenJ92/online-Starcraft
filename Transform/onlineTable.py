@@ -103,12 +103,21 @@ class Table():
                 'UDE': event_dictionary_['UDE']['Terran'] + event_dictionary_['UDE']['Zerg'] + event_dictionary_['UDE']['Protoss'],
                 'BCE': event_dictionary_['BCE']['Terran'] + event_dictionary_['BCE']['Zerg'] + event_dictionary_['BCE']['Protoss']}
 
+    def create_race_table(self):
+        events_ = self.participant.events_(self.event)
+        event_Dataframe = pd.DataFrame([vars(event) for event in events_])
+        full_Dataframe_dummies = pd.DataFrame(columns = self.event_Dictionary()[self.event][self.participant.playrace])
+        event_Dataframe_dummies = pd.get_dummies(event_Dataframe[self.event_Dictionary()[self.event]["event_column"]])
+        full_event_Dataframe_dummies = pd.concat([full_Dataframe_dummies, event_Dataframe_dummies], axis = 0, sort = False)[self.event_Dictionary()[self.event][self.participant.playrace]].fillna(0)
+        return full_event_Dataframe_dummies
+
+    def create_agg_race_table(self):
+        table = self.create_race_table()
+        return table.cumsum(axis = 0)
+
     def create_table(self):
         events_ = self.participant.events_(self.event)
         event_Dataframe = pd.DataFrame([vars(event) for event in events_])
-        if self.event == "PSE":
-            print(event_Dataframe.columns[1:])
-
         full_Dataframe_dummies = pd.DataFrame(columns = self.unique_event_names()[self.event])
         event_Dataframe_dummies = pd.get_dummies(event_Dataframe[self.event_Dictionary()[self.event]["event_column"]])
         full_event_Dataframe_dummies = pd.concat([full_Dataframe_dummies, event_Dataframe_dummies], axis = 0, sort = False)[self.unique_event_names()[self.event]].fillna(0)

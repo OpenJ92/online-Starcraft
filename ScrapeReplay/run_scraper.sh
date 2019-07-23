@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /Users/jacob/Desktop/Personal_Project/Starcraft_2
+cd /Users/jacob/Desktop/Project/Starcraft_2
 source onlineDB/ONLINESTARCRAFT/bin/activate
 
 date_of_execution="$(date)"

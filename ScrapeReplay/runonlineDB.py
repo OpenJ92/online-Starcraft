@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from onlineScrape import Scrape
 from onlineInject import Inject
 from onlinePull import Pull

@@ -15,9 +15,10 @@ class SVD:
         self.db = db_
         self.table = Table(self.participant, event_name)
         self.tSVD = self.tSVD()
+        self.FSV = self.tSVD[2][0]
 
     def tSVD(self):
-        U, s_, VT = svd(self.table.create_agg_table().values)
+        U, s_, VT = svd(self.table.create_agg_race_table().values)
         return U, s_, VT
 
     def database_inject(self):
@@ -36,6 +37,11 @@ class SVD:
         FSV_db.session.add_all([fsv])
         FSV_db.session.commit()
 
+    def zip_name_values(self):
+        names = self.table.unique_event_names()[self.event_name]
+        values = self.FSV
+        return list(zip(names, values))
+
 if __name__ == "__main__":
-    game = db.session.query(Game)[20]
-    A = [SVD(participant, "UBE", FSV_db) for participant in game.participants]
+    game = db.session.query(User)[100]
+    A = [SVD(participant, "UBE", FSV_db).zip_name_values() for participant in game.participants]
