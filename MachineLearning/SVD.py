@@ -42,6 +42,11 @@ class SVD:
         values = self.FSV
         return list(zip(names, values))
 
+    def zip_name_values_race(self):
+        names = self.table.event_Dictionary()[self.event_name][self.participant.playrace]
+        values = self.FSV
+        return list(zip(names, values))
+
 if __name__ == "__main__":
-    game = db.session.query(User)[100]
-    A = [SVD(participant, "UBE", FSV_db).zip_name_values() for participant in game.participants]
+    game = db.session.query(User)[121]
+    A = [SVD(participant, "UBE", FSV_db) for participant in game.participants]
